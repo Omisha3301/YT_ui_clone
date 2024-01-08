@@ -8,10 +8,21 @@ $('.like').click(function() {
   
   if ($(this).hasClass('is-liked')) {
     val++
-    // User has liked (insert userId, itemId into Likes table)
   } else {
     val--
-    // User removed his like (delete from table Likes where userId and itemId)
+  }
+  
+  $(this).text(val);
+});
+
+$('.dislike').click(function() {
+  var val = parseInt($(this).text(), 10);
+  $(this).toggleClass('is-disliked');
+  
+  if ($(this).hasClass('is-disliked')) {
+    val++
+  } else {
+    val--
   }
   
   $(this).text(val);
@@ -20,4 +31,16 @@ $('.like').click(function() {
 $('.button').click(function() {
   $(this).toggleClass('button-selected');
 
+});
+
+$('.subscribe').click(function() {
+  $(this).toggleClass('subscribed');
+  
+  if ($(this).hasClass('subscribed')) {
+    $(this).text("Subscribed");
+  } else {
+    $(this).text("Subscribe");
+  }
+  
+  
 });

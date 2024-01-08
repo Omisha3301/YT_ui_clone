@@ -34,11 +34,11 @@ nav{
 
 }
 
-.like:before{
+.like::before{
 content:"👍🏿";
 }
 
-.dislike:before{
+.dislike::before{
 content:"👎🏿";
 }
 
